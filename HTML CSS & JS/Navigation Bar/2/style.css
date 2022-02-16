@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    color: white;
+    background-color: #5d4954;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 8%;
+    position: relative;
+}
+nav .logo{
+    position: absolute;
+    left: 8%;
+    cursor: pointer;
+}
+.nav-links{
+    position: absolute;
+    right: 8%;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 1.5rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.content{
+    top: 40%;
+    left: 10%;
+    position: absolute;
+    max-width: 600px;
+}
+.content h1{
+    color: rgb(0, 0, 0);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+.content h1 span{
+    color: #5d4954;
+}
+.content button{
+    padding: 13px 25px;
+    margin-top: 15px;
+    background: transparent;
+    border: none;
+    outline: none;
+    background-color: #5d4954;
+    border-radius: 30px;
+    color: white;
+    font-size: .9rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    .burger div{
+        width: 25px;
+        height: 3px;
+        background-color: rgb(226, 226, 226);
+        margin: 5px;
+        cursor: pointer;
+        position: relative;
+        transition: 0.2s;
+    }
+    nav .logo{
+        position: relative;
+    }
+    nav ul li{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        position: relative;
+    }
+    .nav-links.active{
+        height: 100vh;
+        width: 30%;
+        top: 50px;
+        right: 0%;
+        background-color: #5d4954;
+        transition: .3s;
+        z-index: 10;
+    }
+    .nav-links.active ul li{
+        display: flex;
+        flex-direction: column;
+        margin: 35px 45px;
+    }
+    .burger.active .line1{
+        transform: rotate(45deg) translate(3px,6px);
+        position: absolute;
+        transition: 0.2s;
+    }
+    .burger.active .line2{
+        opacity: 0;
+    }
+    .burger.active .line3{
+        transform: rotate(-45deg) translate(3px,-6px);
+        position: absolute;
+        transition: 0.2s;
+    }
+    .content h1{
+        font-size: 2.5rem;
+        z-index: -10;
+    }
+}
