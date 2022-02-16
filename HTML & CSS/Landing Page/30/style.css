@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg, #6563ee, #28c3de);
+    /* padding: 0 10%; */
+}
+.nav-ber{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+}
+.logo{
+    color: white;
+    font-size: 10px;
+    font-weight: 100;
+    padding: 0 8%;
+}
+.nav-links{
+    display: inline-block;
+    position: relative;
+}
+.nav-links ul li{
+    list-style: none;
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+}
