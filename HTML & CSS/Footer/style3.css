@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background: cadetblue;
+}
+hr{
+    width: 98%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 30px auto;
+}
+footer{
+    width: 100%;
+    position: absolute;
+    background: white;
+    color: black;
+    padding: 50px 0;
+    font-size: 13px;
+    line-height: 20px;
+    bottom: 0;
+}
+footer .row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    bottom: 0;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    text-align: center;
+}
+.col{
+    flex-basis: 25%;
+    padding: 10px;
+    /* text-align: center; */
+}
+.col h3{
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 20px;
+    /* width: fit-content; */
+    position: relative;
+    text-align: center;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 3px;
+    text-align: center;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+ul li a:hover{
+    color: green;
+    text-decoration: underline;
+}
+button{
+    padding: 8px 20px;
+    background: #282a35;
+    color: white;
+    border: 0;
+    outline: none;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.fas{
+    margin-left: 5px;
+}
+#pera1{
+    color: #777777;
+    margin: 10px 5px;
+    text-align: center;
+    font-size: 12px;
+}
+p{
+    text-align: center;
+    color: #777777;
+    font-size: 13px;
+}
+.logo{
+    text-align: center;
+    margin-top: 20px;
+}
+.logo a{
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+span{
+    font-weight: 100;
+    color: chartreuse;
+}
+
+@media (max-width: 700px){
+    footer{
+        bottom: unset;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+}
