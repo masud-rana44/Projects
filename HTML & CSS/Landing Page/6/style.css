@@ -1,0 +1,128 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom,yellow,transparent), url(bg.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    background-position: center;
+    font-family: nexa;
+}
+.header{
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.header ul{
+    list-style: none;
+    border-radius: 0 25px;
+}
+.header > ul{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    background: darkslategrey;
+    color: white;
+
+}
+.header > ul > li{
+    position: relative;
+    cursor: pointer;
+    font-family: nexa;
+    font-size: 14px;
+    letter-spacing: 1px;
+    float: left;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;    
+}
+.dropdown li{
+    background: deepskyblue;
+    display: none;
+}
+.dropdown li:hover{
+    background: darkslategrey;
+}
+.dropdown li:hover{
+    background: lightslategray;
+}
+.header li:hover .dropdown li{
+    transform-origin: top left;
+    opacity: 0;
+    display: block;
+}
+.header li:hover > .dropdown li:nth-child(1){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: -150ms;
+}
+.header li:hover > .dropdown li:nth-child(2){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 0;
+}
+.header li:hover > .dropdown li:nth-child(3){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 150ms;
+}
+.header li:hover > .dropdown li:nth-child(4){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 300ms;
+}
+.header li:hover > .dropdown li:nth-child(5){
+    animation: animate 300ms ease-in-out forwards;
+    animation-delay: 450ms;
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg);
+        margin-top: -100px;
+    }
+    80%{
+        margin-top: 0;
+        transform: rotateY(90deg);
+    }
+    90%{
+        transform: rotateY(-10deg);
+    }
+    100%{
+        opacity: 1;
+        margin-top: 0;
+        transform: rotateY(0);
+    }
+}
+.content{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+.box h3{
+    font-size: 50px;
+    margin: 0;
+}
+.box p{
+    width: 75%;
+    margin: auto;
+    padding: 3% 0;
+}
+.box a{
+    text-decoration: none;
+    color: white;
+    background: darkslategrey;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 50px;
+}

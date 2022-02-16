@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.363),rgba(0,0,0,0.363)), url(../IMG/bg.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 30px;
+}
+ul li {
+    display: inline-block;
+}
+ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    /* background-color: rgb(60,179,113); */
+    padding: 5px 20px;
+    border: 1px solid transparent;
+    font-size: 20px;
+    transition: 0.6s ease;
+}
+ul li a:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+ul li.active a {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+.logo img {
+    float: left;
+    width: 150px;
+    height: auto;
+}
+.main {
+    /* max-width: 1200px; */
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title h1 {
+    color:rgb(255, 255, 255);
+    font-size: 90px;
+}
+.button {
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.btn {
+    border: 1px solid white;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    transition: 0.6s ease;
+}
+.btn:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}

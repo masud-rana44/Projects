@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background: #161616;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+}
+.wrapper{
+    max-width: 1152px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+.logo{
+    padding-top: 15px;
+}
+nav{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-nav{
+    padding-top: 15px;
+}
+.right-nav a{
+    text-decoration: none;
+    margin-left: 15px;
+    color: white;
+    transition: all .3 ease;
+}
+.right-nav a:hover{
+    color: #3dcfd3;
+}
+.hero-left{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+.hero-right{
+    flex: 1;
+}
+.hero-section{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-left img{
+    width: 400px;
+}
+.hero-right h2, 
+.hero-right p{
+    color: white;
+}
+h1.cusAni{
+    font-size: 4rem;
+    color: white;
+    position: relative;
+    margin: 0;
+}
+h1.cusAni:before{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    color: #3dcfd3;
+    overflow: hidden;
+    border-right: 2px solid;
+    animation: animate 6s infinite;
+}
+@keyframes animate{
+    0%, 10%, 100%{
+        width: 0;
+    }
+    50%, 70%{
+        width: 100%;
+    }
+}
+span{
+    color: #3dcfd3;
+}
+
+
+/*---responsive css---*/
+
+@media(max-width:1200px){
+    .wrapper{
+        max-width: 1152px;
+    }
+}
+@media(max-width:768px){
+    .wrapper{
+        max-width: 720px;
+    }
+    h1.cusAni{
+        font-size: 2rem;
+    }
+}
+
+@media(max-width:576px){
+    .wrapper{
+        max-width: 540px;
+        flex-direction: column;
+    }
+    nav{
+        display: block;
+        text-align: center;
+    }
+    .hero-right{
+        position: absolute;
+        top: 280px;
+        padding: 0 1rem;
+    }
+    h1.cusAni{
+        font-size: 3rem;
+    }
+}
